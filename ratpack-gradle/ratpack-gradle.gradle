@@ -40,9 +40,7 @@ dependencies {
 
   testCompile gradleTestKit()
   testCompile commonDependencies.guava
-  testCompile 'org.spockframework:spock-core:1.2-groovy-2.5', {
-    exclude module: "groovy-all", group: "org.codehaus.groovy"
-  }
+  testCompile commonDependencies.spock
 }
 
 apiModules.each { evaluationDependsOn(it.path) }

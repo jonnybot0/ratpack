@@ -27,6 +27,7 @@ repositories {
 }
 dependencies {
   compile commonDependencies.groovy
+  compile "org.codehaus.groovy:groovy-json:${commonVersions.groovy}"
   compile commonDependencies.toolingApi, {
     exclude group: "org.slf4j", module: "slf4j-api"
   }

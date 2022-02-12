@@ -60,6 +60,9 @@ dependencies {
   testCompile gradleTestKit()
   testRuntime "org.apache.ant:ant-nodeps:1.8.1"
   testRuntime "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:${commonVersions.jackson}"
+  testCompile("org.codehaus.groovy:groovy-test:${commonVersions.groovy}") {
+    exclude group: "org.codehaus.groovy", module: "groovy"
+  }
 
   testRuntime project(path: ":ratpack-pac4j", configuration: "testRuntime")
 }
